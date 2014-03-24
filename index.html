@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cortex – HTML5 Twister Client</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="js/globalize.min.js"></script>
+    <script type="text/javascript" src="js/dx.phonejs.js"></script>
+    <!--
+    <script type="text/javascript" src="js/dx.phonejs.debug.js"></script>
+    -->
+        
+    <link rel="stylesheet" type="text/css" href="css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="css/dx.ios.default.css" />
+    <link rel="stylesheet" type="text/css" href="css/dx.android.holo-dark.css" />
+    <!--link rel="stylesheet" type="text/css" href="css/dx.android.holo-light.css" /-->
+    <link rel="stylesheet" type="text/css" href="css/dx.win8.black.css" />
+    <!--link rel="stylesheet" type="text/css" href="css/dx.win8.white.css" /-->
+    <link rel="stylesheet" type="text/css" href="css/dx.tizen.white.css" />
+    <!--link rel="stylesheet" type="text/css" href="css/dx.tizen.black.css" /-->
+    <link rel="stylesheet" type="text/css" href="css/dx.generic.light.css" />
+
+    <!-- App -->
+    <script type="text/javascript" src="app.config.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="js/twisterRPC.js"></script>
+
+    <!-- Layouts -->
+    <script type="text/javascript" src="layouts/SlideOut/SlideOutLayout.js"></script>
+    <link rel="stylesheet" type="text/css" href="layouts/SlideOut/SlideOutLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/SlideOut/SlideOutLayout.html" />
+
+    <!-- App views -->
+    <link rel="dx-template" type="text/html" href="views/timeline.html" />
+    <script type="text/javascript" src="views/timeline.js"></script>
+    <link rel="stylesheet" type="text/css" href="views/timeline.css" />
+
+    <link rel="dx-template" type="text/html" href="views/network.html" />
+    <script type="text/javascript" src="views/network.js"></script>
+
+    <link rel="dx-template" type="text/html" href="views/post.html" />
+    <script type="text/javascript" src="views/post.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            Cortex.app.navigate();
+        });
+    </script>
+</head>
+<body>
+    <div class="dx-viewport"></div>
+</body>
+</html>

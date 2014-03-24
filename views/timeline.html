@@ -1,0 +1,33 @@
+﻿<div data-options="dxView: {name: 'timeline', title: 'Timeline'}">
+    <div data-bind="dxCommand: { id: 'newPost', title: 'New post', icon: 'comment', action: '#post' }"></div>
+    <div data-bind="dxCommand: { id: 'scrollToTheTop', title: 'To the top', icon: 'arrowup', action: scrollToTheTop }"></div>
+    <div data-options="dxContent: { targetPlaceholder: 'content' }">
+        <div id="timeline" data-bind="dxList: { dataSource: listSource, autoPagingEnabled: false, showNextButton: true, pullRefreshEnabled: true }">
+            <div data-options="dxTemplate: { name: 'item' }">
+                <div style="font-size:10px; opacity: 0.25" data-bind="visible: isRT">
+                    retwisted by @<span data-bind="text: rtBy"></span>
+                </div>
+                <div style="float: left; font-weight: 700;">
+                    @<span data-bind="text: user"></span>
+                </div>
+                <div style="float: right;">
+                    <span data-bind="text: date"></span>
+                </div>
+                <div style="clear: both;"></div>
+                <div data-bind="html: message" class="wordwrap"></div>
+                <table style="width: 100%;">
+                    <tr>
+                        <td align="left">
+                            <div data-bind="dxButton: { icon: 'comment', clickAction: $root.replyPost }"></div>
+                            <div data-bind="dxButton: { icon: 'plus', clickAction: $root.rtActionSheet.show }"></div>
+                        </td>
+                        <td align="right" style="opacity: 0.25">
+                            [<span data-bind="text: k"></span>]
+                        </td>
+                    </tr>
+                </table>
+            </div>             
+        </div>
+        <div data-bind="dxActionSheet: { dataSource: rtActionSheet.items, visible: rtActionSheet.visible, showTitle: false }"></div>
+    </div>
+</div>

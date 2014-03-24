@@ -1,0 +1,15 @@
+﻿<div data-options="dxView: {name: 'post', title: 'Post message'}">
+    <div data-options="dxContent: { targetPlaceholder: 'content' }">
+        <div data-bind="dxTextArea: { value: message, valueUpdateEvent: 'input' }"></div>
+        <table align="right">
+            <tr>
+                <td align="right" style="padding-right: 10px;">
+                    <div data-bind="text: symbolsLeft"></div>
+                </td>
+                <td align="right">
+                    <div data-bind="dxButton: { text: 'Send', clickAction: postMessage, disabled: postMessageDisabled }" style="width: 90px;"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

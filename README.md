@@ -1,4 +1,3 @@
-Cortex
-======
+# Cortex
 
-HTML5 Twister Client Application
+Cortex is HTML5 mobile client application for [twister](http://twister.net.co/).
